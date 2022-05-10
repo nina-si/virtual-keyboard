@@ -8,6 +8,11 @@ class App {
     this.appContainer = new Control(this.body, 'div', 'container');
     this.textarea = new Textarea(this.appContainer.node);
     this.keys = new Keycontainer(this.appContainer.node);
+    this.appContainer.node.addEventListener('click', () => this.updateState());
+  }
+
+  updateState() {
+    this.textarea.updateText();
   }
 }
 

@@ -1,5 +1,5 @@
 import Control from '../../utils/Control/control';
-import { KEY_DATA } from '../../key-data';
+import { KEY_DATA } from '../../common/key-data';
 
 import './keycontainer.styles.scss';
 import Key from '../key/key';
