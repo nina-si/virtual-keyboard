@@ -1,0 +1,16 @@
+.key {
+  padding: 15px;
+  min-width: 25px;
+  height: 25px;
+  background-color: rgb(140, 236, 204);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid rgb(10, 163, 112);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space {
+  min-width: 175px;
+}
