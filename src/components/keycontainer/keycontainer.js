@@ -9,7 +9,6 @@ class Keycontainer extends Control {
     super(parentNode, 'div', 'keycontainer');
     this.keyRows = [...KEY_DATA];
     this.renderRows(this.keyRows, this.node);
-    console.log(this.keyData);
   }
 
   renderRows(rowsData, parentNode) {

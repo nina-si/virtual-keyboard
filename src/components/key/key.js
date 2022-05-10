@@ -13,12 +13,26 @@ class Key extends Control {
     this.node.textContent = keyData[this.language];
     if (keyData.en === ' ') this.node.classList.add('space');
     this.node.addEventListener('click', () => this.type());
+    document.addEventListener('keydown', (e) => this.handleKeyPress(e));
+    document.addEventListener('keyup', (e) => this.handleKeyUp(e));
   }
 
   type() {
     if (!this.keyData.functional) {
       addText(this.node.textContent, this.textType);
     }
+  }
+
+  handleKeyPress(e) {
+    if (e.key === this.keyData.en.toLowerCase()) {
+      this.node.classList.add('key-active');
+      this.type();
+    }
+  }
+
+  handleKeyUp(e) {
+    if (e.key === this.keyData.en.toLowerCase())
+      this.node.classList.remove('key-active');
   }
 }
 

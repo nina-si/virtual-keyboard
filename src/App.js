@@ -9,6 +9,8 @@ class App {
     this.textarea = new Textarea(this.appContainer.node);
     this.keys = new Keycontainer(this.appContainer.node);
     this.appContainer.node.addEventListener('click', () => this.updateState());
+    document.addEventListener('keyup', () => this.updateState());
+    document.addEventListener('keydown', () => this.updateState());
   }
 
   updateState() {
